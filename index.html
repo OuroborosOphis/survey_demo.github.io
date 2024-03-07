@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="survey-container">
+        <!-- <h1>Thông tin cá nhân</h1> -->
+        <form id="personal-info-form">
+            <h1>Vui lòng điền thông tin cá nhân để bắt đầu khảo sát</h1>
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" required>
+
+            <label for="dob">Ngày tháng năm sinh:</label>
+            <input type="date" id="dob" required>
+
+            <label for="cccd">CCCD:</label>
+            <input type="text" id="cccd" required>
+
+            <label for="address">Địa chỉ thường trú:</label>
+            <textarea id="address" rows="2" required></textarea>
+
+            <button type="button" onclick="startSurvey()">Bắt đầu khảo sát</button>
+        </form>
+
+        <div id="survey-questions" style="display: none;">
+            <h2>Câu hỏi khảo sát</h2>
+            <h3>Nhóm 1: Lựa chọn đúng/sai</h3>
+            <div class="question-group" id="group1">
+                <!-- Nhóm 1: Lựa chọn đúng/sai -->
+                <!-- Thêm các câu hỏi của nhóm 1 ở đây -->
+            </div>
+            <h3>Nhóm 2: Chọn 1 trong 4 đáp án</h3>
+            <div class="question-group" id="group2">
+                <!-- Nhóm 2: Chọn 1 trong 4 đáp án -->
+                <!-- Thêm các câu hỏi của nhóm 2 ở đây -->
+            </div>
+            <h3>Nhóm 3: Chọn nhiều đáp án</h3>
+            <div class="question-group" id="group3">
+                <!-- Nhóm 3: Chọn nhiều đáp án -->
+                <!-- Thêm các câu hỏi của nhóm 3 ở đây -->
+            </div>
+            <h3>Nhóm 4: Trả lời tự luận</h3>
+            <div class="question-group" id="group4">
+                <!-- Nhóm 4: Trả lời tự luận -->
+                <!-- Thêm các câu hỏi của nhóm 4 ở đây -->
+            </div>
+
+            <button type="button" onclick="submitSurvey()">Hoàn thành khảo sát</button>
+        </div>
+
+        <!-- hien thi ket qua khao sat -->
+        <div id="result-container" style="display: none;">
+            <h2>Kết quả khảo sát</h2>
+            <p id="result-message"></p>
+        </div>
+
+    </div>
+</body>
+
+</html>
